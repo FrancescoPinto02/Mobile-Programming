@@ -3,9 +3,10 @@ package com.example.rubrica;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Contact implements Comparable<Contact> {
+public class Contact implements Comparable<Contact>, Serializable {
     private String name;
     private String phoneNumber;
     private Drawable picture;

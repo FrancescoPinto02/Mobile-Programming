@@ -1,5 +1,6 @@
 package com.example.rubrica;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.browse.MediaBrowser;
@@ -25,17 +26,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        contactsListView = findViewById(R.id.contactsLV);
-        contactGenerator = new ContactGenerator(this);
-        contacts = (ArrayList<Contact>) contactGenerator.generateContactCollection(20);
-        Collections.sort(contacts);
+        if(savedInstanceState!=null){
+            contacts = (ArrayList<Contact>) savedInstanceState.getSerializable("contacts");
+        }
+        else{
+            contactGenerator = new ContactGenerator(this);
+            contacts = (ArrayList<Contact>) contactGenerator.generateContactCollection(20);
+            Collections.sort(contacts);
+        }
 
+
+        contactsListView = findViewById(R.id.contactsLV);
 
         // Inizializza l'ArrayAdapter con la lista di contatti
         customAdapter = new CustomAdapter(this, R.layout.list_element, contacts);
 
         // Imposta l'ArrayAdapter sul ListView
         contactsListView.setAdapter(customAdapter);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle savedInstanceState){
+        //salva lo stato dell`app
+        savedInstanceState.putSerializable("contacts",contacts);
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     public void onPictureClick(View v) {
