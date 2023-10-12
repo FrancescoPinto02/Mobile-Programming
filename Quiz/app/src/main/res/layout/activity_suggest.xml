@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SuggestActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggerimento"
+        android:textSize="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/TVsuggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Testo suggerimento"
+        android:textSize="25dp"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/TVsuggest"
+        android:layout_marginTop="10dp">
+
+
+        <Button
+            android:id="@+id/returnB"
+            android:onClick="returnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Torna"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/showB"
+            android:onClick="showClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostra"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
