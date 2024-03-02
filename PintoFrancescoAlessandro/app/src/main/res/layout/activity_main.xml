@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <ToggleButton
+        android:layout_marginTop="20dp"
+        android:background="#6750A3"
+        android:id="@+id/modToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Destra"
+        android:textOn="Sinistra"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:checked="false"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/digitsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#4CAF50"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/digit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/digit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/digit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/digit4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/digit5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/digit6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/digit7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/digit8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40dp"
+            android:paddingHorizontal="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/intDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#4CAF50"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="150dp"
+        android:text="255"
+        android:textSize="40dp">
+
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/shuffle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S2"
+            android:onClick="shuffle2"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/shuffle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="S4"/>
+    </LinearLayout>
+
+</LinearLayout>

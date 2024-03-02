@@ -18,6 +18,7 @@
         android:textSize="40dp"
         android:gravity="center"/>
 
+
     <ListView
         android:id="@+id/contactsLV"
         android:layout_width="match_parent"

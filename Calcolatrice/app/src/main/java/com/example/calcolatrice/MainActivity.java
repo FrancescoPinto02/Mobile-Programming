@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         displayMain = findViewById(R.id.displayMain);
     }
-
+    
     public void numClick(View v){
         Button b = findViewById(v.getId());
         if(opLength < MAX_OPERAND_LENGTH && !error){

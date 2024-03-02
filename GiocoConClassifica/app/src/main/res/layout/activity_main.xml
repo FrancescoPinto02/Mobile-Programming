@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#2196F3"
+        android:text="PintoFrancescoAlessandro"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="0"
+        android:background="#FFC107"
+        android:textSize="70dp"
+        android:paddingHorizontal="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:layout_toRightOf="@id/counter"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:onClick="increaseCounter"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_toLeftOf="@id/counter"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:onClick="decreaseCounter"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/counter"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TERMINA"
+            android:layout_marginRight="10dp"
+            android:onClick="endGame"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLASSIFICA"
+            android:layout_marginLeft="10dp"
+            android:onClick="showLeaderboard"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/counter"
+        android:layout_centerHorizontal="true"
+        android:text="RESET"
+        android:onClick="resetGame"/>
+
+</RelativeLayout>
